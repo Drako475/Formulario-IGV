@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="Estilos/Estilo.css">
+</head>
+<body background="Imagenes/1.jpg">
+    <section>
+    <form name="calc">
+        <h3>Nombre del producto</h3>
+        <input type="Text" name="operando3" value="Nombre" size="12"> 
+        <br>
+        <h1>Precio del producto</h1> 
+        <input type="Text" name="operando1" value="0" size="12"> 
+        <br>
+        <h2>Cantidad de productos</h2> 
+        <input type="Text" name="operando2" value="0" size="12"> 
+        <br> 
+        <input class='Button' type="Button" name="" value="Calcular" onclick="calcula('*')"> 
+        <br> 
+        <input type="Text" name="resultado" value="0" size="45"> 
+    </form>
+    <script> 
+        function calcula(operacion){ 
+            var operando1 = document.calc.operando1.value 
+            var operando2 = document.calc.operando2.value
+            var operando3 = document.calc.operando3.value 
+            var result = eval(operando1 + operacion + operando2) 
+            document.calc.resultado.value = operando3+", Producto con IGV=S/"+result*1.18 
+        } 
+        </script>
+    </section>
+</body>
+</html>
